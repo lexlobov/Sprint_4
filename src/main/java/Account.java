@@ -9,7 +9,9 @@ public class Account {
     public boolean checkNameToEmboss() {
         if (name.startsWith(" ") | name.endsWith(" ") | !name.contains(" ")){
             return false;
-        } else if(name.length() < 3 | name.length()>19){
+        } else if (!(name.indexOf(" ") == name.lastIndexOf(" "))){
+            return false;
+        }else if(name.length() < 3 | name.length()>19){
             return false;
         } else {
             return true;
