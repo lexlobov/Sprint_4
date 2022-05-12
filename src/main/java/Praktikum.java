@@ -6,9 +6,10 @@ public class Praktikum {
              Нужно создать экземпляр класса Account: в качестве аргумента передать тестируемое имя
              и вызвать метод, который проверяет, можно ли использовать фамилию и имя для печати на банковской карте.
          */
-        String name = "John Cena";
-        Account account = new Account(name);
-        account.checkNameToEmboss();
-    }
 
+        for (String name : args){
+            Account account = new Account(name);
+            account.checkNameToEmboss();
+        }
+    }
 }
